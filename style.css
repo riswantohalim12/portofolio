@@ -519,7 +519,7 @@ section.start-animation .skill-box2{
 
 /* project-content */
 
-.wrapper122{
+.wrapper2{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -527,18 +527,18 @@ section.start-animation .skill-box2{
     gap: 5rem;
     flex-wrap: wrap;
 }
-.skill-title122{
+.skill-title2{
     font-size: 2.4rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
     opacity: 0;
     transform: translateY(-100px);
 }
-section.start-animation .skill-title122{
+section.start-animation .skill-title2{
     animation: top 1s ease forwards;
     animation-delay: 1.1s;
 }
-.skill-content122{
+.skill-content2{
     width: 100%;
     flex:  1 1 30rem;
 }
@@ -549,67 +549,82 @@ section.start-animation .skill-title122{
     background: rgba(255,255,255,.1);
     border-radius: 1rem;
 }
-.skill-box422{
+.skill-box22{
     opacity: 0;
     transform: translateX(-100px);
 }
-.skill-box422 img {
+.skill-box22 img {
     width: 500px; /* Atur ukuran lebar sesuai keinginan */
     height: auto; /* Menjaga proporsi gambar */
     border: 5px solid #fff; /* Atur ketebalan dan warna border */
     border-radius: 1rem; /* Untuk memberikan sudut border yang melengkung */
 }
-section.start-animation .skill-box422{
+section.start-animation .skill-box22{
     animation:  Right 1s ease forwards;
     animation-delay: 1.1s;
 }
-section.start-animation .skill-box422 img{
+section.start-animation .skill-box22 img{
     animation:  Right 1s ease forwards;
     animation-delay: 1.1s;
 }
-
-
-.skill-box522{
+.skill-box23{
     opacity: 0;
     transform: translateX(100px);
 }
-.skill-box522 img {
+.skill-box23 img {
     width: 500px; /* Atur ukuran lebar sesuai keinginan */
     height: auto; /* Menjaga proporsi gambar */
     border: 5px solid #fff; /* Atur ketebalan dan warna border */
     border-radius: 1rem; /* Untuk memberikan sudut border yang melengkung */
 }
-section.start-animation .skill-box522{
+section.start-animation .skill-box23{
     animation:Left 1s ease forwards;
     animation-delay: 1.1s;
 }
-section.start-animation .skill-box522 img{
+section.start-animation .skill-box23 img{
     animation:  Right 1s ease forwards;
     animation-delay: 1.1s;
 }
-
-
-.skill-box622{
+.skill-box24{
     opacity: 0;
     transform: translateX(100px);
 }
-.skill-box622 img {
+.skill-box24 img {
     width: 500px; /* Atur ukuran lebar sesuai keinginan */
     height: auto; /* Menjaga proporsi gambar */
     border: 5px solid #fff; /* Atur ketebalan dan warna border */
     border-radius: 1rem; /* Untuk memberikan sudut border yang melengkung */
 }
-section.start-animation .skill-box622{
+section.start-animation .skill-box24{
     animation:Left 1s ease forwards;
     animation-delay: 1.1s;
 }
-section.start-animation .skill-box622 img{
+section.start-animation .skill-box24 img{
     animation:  Right 1s ease forwards;
     animation-delay: 1.1s;
 }
-.skill-box422 img, 
-.skill-box522 img, 
-.skill-box622 img {
+.skill-box25{
+    opacity: 0;
+    transform: translateX(100px);
+}
+.skill-box25 img {
+    width: 300px; /* Atur ukuran lebar sesuai keinginan */
+    height: auto; /* Menjaga proporsi gambar */
+    border: 5px solid #fff; /* Atur ketebalan dan warna border */
+    border-radius: 1rem; /* Untuk memberikan sudut border yang melengkung */
+}
+section.start-animation .skill-box25{
+    animation:Left 1s ease forwards;
+    animation-delay: 1.1s;
+}
+section.start-animation .skill-box25 img{
+    animation:  Right 1s ease forwards;
+    animation-delay: 1.1s;
+}
+.skill-box22 img, 
+.skill-box23 img, 
+.skill-box24 img,
+.skill-box25 img {
     max-width: 100%; /* Menyesuaikan lebar maksimal gambar sesuai kontainer */
     height: auto; /* Menjaga proporsi gambar */
     border: 5px solid #fff; /* Atur ketebalan dan warna border */
@@ -708,9 +723,29 @@ section.start-animation .skill-box6 img{
     animation:  Right 1s ease forwards;
     animation-delay: 1.1s;
 }
+
+.skill-box7{
+    opacity: 0;
+    transform: translateX(100px);
+}
+.skill-box7 img {
+    width: 300px; /* Atur ukuran lebar sesuai keinginan */
+    height: auto; /* Menjaga proporsi gambar */
+    border: 5px solid #fff; /* Atur ketebalan dan warna border */
+    border-radius: 1rem; /* Untuk memberikan sudut border yang melengkung */
+}
+section.start-animation .skill-box7{
+    animation:Left 1s ease forwards;
+    animation-delay: 1.1s;
+}
+section.start-animation .skill-box7 img{
+    animation:  Right 1s ease forwards;
+    animation-delay: 1.1s;
+}
 .skill-box4 img, 
 .skill-box5 img, 
-.skill-box6 img {
+.skill-box6 img,
+.skill-box7 img {
     max-width: 100%; /* Menyesuaikan lebar maksimal gambar sesuai kontainer */
     height: auto; /* Menjaga proporsi gambar */
     border: 5px solid #fff; /* Atur ketebalan dan warna border */
