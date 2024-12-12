@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enhanced Snake Game</title>
+  <meta charset="UTF-8">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      color: white;
+      background: linear-gradient(135deg, #2b1055, #7597de);
+    }
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 20%, transparent 80%);
+      pointer-events: none;
+      mix-blend-mode: screen;
+      opacity: 0.8;
+    }
+    #score {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 20px;
+      z-index: 2;
+    }
+    #welcome {
+      position: absolute;
+      font-size: 30px;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      animation: fadeOut 2s forwards;
+    }
+    #title {
+      position: absolute;
+      top: 10%;
+      font-size: 36px;
+      text-align: center;
+      width: 100%;
+      color: #ffd700;
+      z-index: 3;
+      font-weight: bold;
+    }
+    @keyframes fadeOut {
+      0% { opacity: 1; }
+      100% { opacity: 0; visibility: hidden; }
+    }
+    canvas {
+      border: 1px solid white;
+      z-index: 1;
+    }
+    .stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle 3s infinite ease-in-out;
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 0.8; }
+    }
+  </style>
+</head>
+<body>
+  <div id="title">Snake Game</div> <!-- Teks tambahan di atas permainan -->
+  <div id="score">Score: 0</div>
+  <div id="welcome">Selamat Datang!</div>
+  <canvas width="400" height="400" id="game"></canvas>
+  <div class="stars"></div>
+
+  <script>
+    // JavaScript for the Snake Game (existing code)
+    var canvas = document.getElementById('game');
+    var context = canvas.getContext('2d');
+    var grid = 16;
+    var count = 0;
+    var score = 0;
+    var speed = 4;
+    var gamePaused = false;
+
+    var snake = {
+      x: 160,
+      y: 160,
+      dx: grid,
+      dy: 0,
+      cells: [],
+      maxCells: 4
+    };
+    var apple = { x: 320, y: 320 };
+    var obstacles = [
+      { x: 80, y: 80 },
+      { x: 240, y: 240 },
+      { x: 160, y: 320 }
+    ];
+
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+    function loop() {
+      if (gamePaused) return;
+      requestAnimationFrame(loop);
+      if (++count < speed) return;
+      count = 0;
+      context.clearRect(0, 0, canvas.width, canvas.height);
+
+      snake.x += snake.dx;
+      snake.y += snake.dy;
+
+      if (snake.x < 0) snake.x = canvas.width - grid;
+      else if (snake.x >= canvas.width) snake.x = 0;
+      if (snake.y < 0) snake.y = canvas.height - grid;
+      else if (snake.y >= canvas.height) snake.y = 0;
+
+      snake.cells.unshift({x: snake.x, y: snake.y});
+      if (snake.cells.length > snake.maxCells) snake.cells.pop();
+
+      context.fillStyle = 'red';
+      context.fillRect(apple.x, apple.y, grid - 1, grid - 1);
+
+      context.fillStyle = 'green';
+      snake.cells.forEach(function(cell, index) {
+        context.fillRect(cell.x, cell.y, grid - 1, grid - 1);
+
+        if (cell.x === apple.x && cell.y === apple.y) {
+          snake.maxCells++;
+          score++;
+          document.getElementById('score').innerText = 'Score: ' + score;
+          apple.x = getRandomInt(0, 25) * grid;
+          apple.y = getRandomInt(0, 25) * grid;
+          if (score % 5 === 0) speed = Math.max(1, speed - 1);
+        }
+        for (var i = index + 1; i < snake.cells.length; i++) {
+          if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) resetGame();
+        }
+      });
+
+      drawObstacles();
+      checkCollisionWithObstacles();
+    }
+
+    function drawObstacles() {
+      context.fillStyle = 'blue';
+      obstacles.forEach(function(obstacle) {
+        context.fillRect(obstacle.x, obstacle.y, grid - 1, grid - 1);
+      });
+    }
+
+    function checkCollisionWithObstacles() {
+      obstacles.forEach(function(obstacle) {
+        if (snake.x === obstacle.x && snake.y === obstacle.y) resetGame();
+      });
+    }
+
+    function resetGame() {
+      alert('Game Over! Your score was: ' + score);
+      snake.x = 160;
+      snake.y = 160;
+      snake.cells = [];
+      snake.maxCells = 4;
+      snake.dx = grid;
+      snake.dy = 0;
+      score = 0;
+      speed = 4;
+      document.getElementById('score').innerText = 'Score: 0';
+      apple.x = getRandomInt(0, 25) * grid;
+      apple.y = getRandomInt(0, 25) * grid;
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.which === 80) {
+        gamePaused = !gamePaused;
+        if (!gamePaused) requestAnimationFrame(loop);
+      }
+      if (gamePaused) return;
+
+      if (e.which === 37 && snake.dx === 0) {
+        snake.dx = -grid;
+        snake.dy = 0;
+      } else if (e.which === 38 && snake.dy === 0) {
+        snake.dy = -grid;
+        snake.dx = 0;
+      } else if (e.which === 39 && snake.dx === 0) {
+        snake.dx = grid;
+        snake.dy = 0;
+      } else if (e.which === 40 && snake.dy === 0) {
+        snake.dy = grid;
+        snake.dx = 0;
+      }
+    });
+
+    requestAnimationFrame(loop);
+
+    // JavaScript for Star Animation
+    function createStars() {
+      for (let i = 0; i < 100; i++) {
+        const star = document.createElement("div");
+        star.classList.add("star");
+        star.style.width = `${Math.random() * 3 + 1}px`;
+        star.style.height = star.style.width;
+        star.style.top = `${Math.random() * window.innerHeight}px`;
+        star.style.left = `${Math.random() * window.innerWidth}px`;
+        document.querySelector('.stars').appendChild(star);
+      }
+    }
+    createStars();
+  </script>
+</body>
+</html>
