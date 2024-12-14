@@ -518,7 +518,7 @@ section.start-animation .skill-box2{
 /* project-content */
 
 .wrapper2{
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -621,8 +621,8 @@ section.start-animation .skill-box25 img{
 }
 .skill-box22 img, 
 .skill-box23 img, 
-.skill-box25 img,
-.skill-box24 img {
+.skill-box24 img,
+.skill-box25 img {
     max-width: 100%; /* Menyesuaikan lebar maksimal gambar sesuai kontainer */
     height: auto; /* Menjaga proporsi gambar */
     border: 5px solid #fff; /* Atur ketebalan dan warna border */
@@ -632,7 +632,7 @@ section.start-animation .skill-box25 img{
 
 /* certificate-content */
 .wrapper1{
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
