@@ -522,7 +522,7 @@ section.start-animation .skill-box2{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 28%;
+     gap: 100px;
     flex-wrap: wrap;
 }
 .skill-title2{
@@ -636,7 +636,7 @@ section.start-animation .skill-box25 img{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 28%;
+    gap: 100px;
     flex-wrap: wrap;
 }
 .skill-title1{
@@ -784,7 +784,7 @@ section.start-animation input:nth-child(2){
     border: .2rem solid rgba(255,255,255,.3);
     outline: none;
     backdrop-filter: blur(10px);
-    filter: drop-shadow(0 0 100px #9DC88D);
+    filter: drop-shadow(0 0 100px #040e00);
     border-radius: .8rem;
     gap: 2.5rem;
     margin: .7rem 0;
