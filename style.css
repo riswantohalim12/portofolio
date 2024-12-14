@@ -518,11 +518,11 @@ section.start-animation .skill-box2{
 /* project-content */
 
 .wrapper2{
-    width: 90%;
+    width: 105%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 35%;
+    gap: 40%;
     flex-wrap: wrap;
 }
 .skill-title2{
@@ -632,11 +632,11 @@ section.start-animation .skill-box25 img{
 
 /* certificate-content */
 .wrapper1{
-    width: 90%;
+    width: 105%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 35%;
+    gap: 40%;
     flex-wrap: wrap;
 }
 .skill-title1{
