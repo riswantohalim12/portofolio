@@ -522,7 +522,7 @@ section.start-animation .skill-box2{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 40%;
+    gap: 45%;
     flex-wrap: wrap;
 }
 .skill-title2{
@@ -636,7 +636,7 @@ section.start-animation .skill-box25 img{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 40%;
+    gap: 45%;
     flex-wrap: wrap;
 }
 .skill-title1{
