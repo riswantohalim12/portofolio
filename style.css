@@ -518,11 +518,11 @@ section.start-animation .skill-box2{
 /* project-content */
 
 .wrapper2{
-    width: 105%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-     gap: 100px;
+     gap: 5rem;
     flex-wrap: wrap;
 }
 .skill-title2{
