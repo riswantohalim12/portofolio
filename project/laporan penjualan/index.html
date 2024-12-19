@@ -8,11 +8,33 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
             text-align: center;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #d0d8e8;
+        }
+        th[colspan="12"] {
+            background-color: #d0d8e8;
+        }
+        th[rowspan="2"] {
+            background-color: #d0d8e8;
         }
         canvas {
             max-width: 600px;
             margin: auto;
+        }
+        h1{
+            text-align: center;
         }
     </style>
 </head>
@@ -69,7 +91,7 @@
             </tr>
         </tbody>
     </table>
-    <canvas id="salesChart" width="1200" height="600" style="display: block; margin: 0 auto;"></canvas>
+    <canvas id="salesChart" width="4200" height="2100" style="display: block; margin: 0 auto;"></canvas>
 
 
     <script src="script.js"></script>
