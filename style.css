@@ -661,22 +661,22 @@ section.start-animation .skill-box26 img{
 .skill-title1{
     font-size: 2.4rem;
     font-weight: 600;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
     opacity: 0;
     transform: translateY(-100px);
 }
 section.start-animation .skill-title1{
     animation: top 1s ease forwards;
-    animation-delay: 1.1s;
+    animation-delay: 1.2s;
 }
 .skill-content1{
-    width: 200%;
+    width: 100%;
     flex:  1 1 30rem;
 }
 .skill-boxk{
     height: 100%;
     width: 100%;
-    padding: 4rem 2rem ;
+    padding: 4rem 2rem;
     background: rgba(255,255,255,.1);
     border-radius: 1rem;
 }
@@ -687,16 +687,16 @@ section.start-animation .skill-title1{
 .skill-box4 img {
     width: 500px; /* Atur ukuran lebar sesuai keinginan */
     height: auto; /* Menjaga proporsi gambar */
-    border: 5px solid #fff; /* Atur ketebalan dan warna border */
+    border: 5px solid #48cae4; /* Atur ketebalan dan warna border */
     border-radius: 1rem; /* Untuk memberikan sudut border yang melengkung */
 }
 section.start-animation .skill-box4{
     animation:  Right 1s ease forwards;
-    animation-delay: 1.1s;
+    animation-delay: 1.2s;
 }
 section.start-animation .skill-box4 img{
     animation:  Right 1s ease forwards;
-    animation-delay: 1.1s;
+    animation-delay: 1.2s;
 }
 
 
@@ -707,16 +707,34 @@ section.start-animation .skill-box4 img{
 .skill-box5 img {
     width: 500px; /* Atur ukuran lebar sesuai keinginan */
     height: auto; /* Menjaga proporsi gambar */
-    border: 5px solid #fff; /* Atur ketebalan dan warna border */
+    border: 5px solid #48cae4; /* Atur ketebalan dan warna border */
     border-radius: 1rem; /* Untuk memberikan sudut border yang melengkung */
 }
 section.start-animation .skill-box5{
     animation:Left 1s ease forwards;
-    animation-delay: 1.1s;
+    animation-delay: 1.4s;
 }
 section.start-animation .skill-box5 img{
     animation:  Right 1s ease forwards;
-    animation-delay: 1.1s;
+    animation-delay: 1.2s;
+}
+.skill-box7{
+    opacity: 0;
+    transform: translateX(100px);
+}
+.skill-box7 img {
+    width: 500px; /* Atur ukuran lebar sesuai keinginan */
+    height: auto; /* Menjaga proporsi gambar */
+    border: 5px solid #48cae4; /* Atur ketebalan dan warna border */
+    border-radius: 1rem; /* Untuk memberikan sudut border yang melengkung */
+}
+section.start-animation .skill-box7{
+    animation:Left 1s ease forwards;
+    animation-delay: 1.4s;
+}
+section.start-animation .skill-box7 img{
+    animation:  Right 1s ease forwards;
+    animation-delay: 1.2s;
 }
 
 
@@ -727,44 +745,25 @@ section.start-animation .skill-box5 img{
 .skill-box6 img {
     width: 500px; /* Atur ukuran lebar sesuai keinginan */
     height: auto; /* Menjaga proporsi gambar */
-    border: 5px solid #fff; /* Atur ketebalan dan warna border */
+    border: 5px solid #48cae4; /* Atur ketebalan dan warna border */
     border-radius: 1rem; /* Untuk memberikan sudut border yang melengkung */
 }
 section.start-animation .skill-box6{
     animation:Left 1s ease forwards;
-    animation-delay: 1.1s;
+    animation-delay: 1.4s;
 }
 section.start-animation .skill-box6 img{
     animation:  Right 1s ease forwards;
-    animation-delay: 1.1s;
+    animation-delay: 1.2s;
 }
 
-.skill-box7{
-    opacity: 0;
-    transform: translateX(100px);
-}
-.skill-box7 img {
-    width: 500px; /* Atur ukuran lebar sesuai keinginan */
-    height: auto; /* Menjaga proporsi gambar */
-    border: 5px solid #ffffff; /* Atur ketebalan dan warna border */
-    border-radius: 1rem; /* Untuk memberikan sudut border yang melengkung */
-    
-}
-section.start-animation .skill-box7{
-    animation:Left 1s ease forwards;
-    animation-delay: 1.1s;
-}
-section.start-animation .skill-box7 img{
-    animation:  Right 1s ease forwards;
-    animation-delay: 1.1s;
-}
 .skill-box4 img, 
 .skill-box5 img, 
 .skill-box6 img,
 .skill-box7 img {
     max-width: 100%; /* Menyesuaikan lebar maksimal gambar sesuai kontainer */
     height: auto; /* Menjaga proporsi gambar */
-    border: 5px solid #fff; /* Atur ketebalan dan warna border */
+    border: 5px solid #48cae4; /* Atur ketebalan dan warna border */
     border-radius: 1rem; /* Untuk memberikan sudut border yang melengkung */
 }
 
