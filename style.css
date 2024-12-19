@@ -514,6 +514,7 @@ section.start-animation .skill-box2{
 }
 
 
+
 /* project-content */
 
 .wrapper2{
@@ -743,7 +744,7 @@ section.start-animation .skill-box6 img{
     transform: translateX(100px);
 }
 .skill-box7 img {
-    width: 260px; /* Atur ukuran lebar sesuai keinginan */
+    width: 500px; /* Atur ukuran lebar sesuai keinginan */
     height: auto; /* Menjaga proporsi gambar */
     border: 5px solid #ffffff; /* Atur ketebalan dan warna border */
     border-radius: 1rem; /* Untuk memberikan sudut border yang melengkung */
