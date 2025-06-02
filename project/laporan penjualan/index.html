@@ -3,96 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laporan Penjualan</title>
+    <title>Laporan Penjualan Profesional</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 1.1em;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
-            font-size: 18px;
-            text-align: center;
+            margin: 25px 0;
+            font-size: 0.95em;
         }
         th, td {
-            padding: 8px;
             border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: center;
         }
         th {
-            background-color: #d0d8e8;
+            background-color: #3498db;
+            color: #ffffff;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
-        th[colspan="12"] {
-            background-color: #d0d8e8;
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
         }
-        th[rowspan="2"] {
-            background-color: #d0d8e8;
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+        .chart-container {
+            width: 100%;
+            max-width: 800px; /* Batasi lebar chart agar tidak terlalu lebar di layar besar */
+            margin: 30px auto; /* Pusatkan chart container */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         canvas {
-            max-width: 600px;
-            margin: auto;
-        }
-        h1{
-            text-align: center;
+            display: block; /* Hilangkan spasi ekstra di bawah canvas */
+            width: 100% !important; /* Pastikan canvas mengisi container */
+            height: auto !important; /* Biarkan tinggi menyesuaikan aspek rasio */
         }
     </style>
 </head>
 <body>
-    <h1>Laporan Penjualan</h1>
-    <table border="1" style="margin: 20px auto; text-align: center;">
-        <thead>
-            <tr>
-                <th>Tahun</th>
-                <th>Januari</th>
-                <th>Februari</th>
-                <th>Maret</th>
-                <th>April</th>
-                <th>Mei</th>
-                <th>Juni</th>
-                <th>Juli</th>
-                <th>Agustus</th>
-                <th>September</th>
-                <th>Oktober</th>
-                <th>November</th>
-                <th>Desember</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>2022</td>
-                <td>4017</td>
-                <td>4136</td>
-                <td>7091</td>
-                <td>7555</td>
-                <td>5481</td>
-                <td>5467</td>
-                <td>7130</td>
-                <td>6133</td>
-                <td>3995</td>
-                <td>2897</td>
-                <td>5235</td>
-                <td>5472</td>
-            </tr>
-            <tr>
-                <td>2023</td>
-                <td>6135</td>
-                <td>7416</td>
-                <td>5841</td>
-                <td>5841</td>
-                <td>6547</td>
-                <td>3467</td>
-                <td>6343</td>
-                <td>9340</td>
-                <td>2977</td>
-                <td>8879</td>
-                <td>5435</td>
-                <td>889</td>
-            </tr>
-        </tbody>
-    </table>
-    <canvas id="salesChart" width="4200" height="2100" style="display: block; margin: 0 auto;"></canvas>
+    <div class="container">
+        <h1>Laporan Penjualan</h1>
+        <p class="subtitle">Analisis Data Penjualan Bulanan untuk Tahun 2022 dan 2023</p>
 
+        <table id="salesDataTable">
+            <thead>
+                <tr>
+                    <th>Tahun</th>
+                    <th>Januari</th>
+                    <th>Februari</th>
+                    <th>Maret</th>
+                    <th>April</th>
+                    <th>Mei</th>
+                    <th>Juni</th>
+                    <th>Juli</th>
+                    <th>Agustus</th>
+                    <th>September</th>
+                    <th>Oktober</th>
+                    <th>November</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2022</td>
+                    <td>4017</td>
+                    <td>4136</td>
+                    <td>7091</td>
+                    <td>7555</td>
+                    <td>5481</td>
+                    <td>5467</td>
+                    <td>7130</td>
+                    <td>6133</td>
+                    <td>3995</td>
+                    <td>2897</td>
+                    <td>5235</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>6135</td>
+                    <td>7416</td>
+                    <td>5841</td>
+                    <td>5841</td>
+                    <td>6547</td>
+                    <td>3467</td>
+                    <td>6343</td>
+                    <td>9340</td>
+                    <td>2977</td>
+                    <td>8879</td>
+                    <td>5435</td>
+                </tr>
+                </tbody>
+        </table>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="salesChart"></canvas>
+    </div>
 
     <script src="script.js"></script>
 </body>
