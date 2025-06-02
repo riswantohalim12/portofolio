@@ -8,7 +8,6 @@
     <title>Riswanto halim</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://kit.fontawesome.com/aa7454d09f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -18,17 +17,11 @@
         <i class='bx bx-menu' id="menu" style='color:#ffffff'></i>
         <nav class="navbar">
             <a href="#home" style="--vlr:1" class="active">Home</a>
-            <li class="nav-item"><a href="#about" class="nav-link"  style="--vlr:2">About Me</a></li>
-            <li class="nav-item"><a href="#skills" class="nav-link" style="--vlr:4">Skills</a></li>
-            <li class="nav-item"><a href="#project" class="nav-link" style="--vlr:4">project</a></li>
-            <li class="nav-item"><a href="#Galery" class="nav-link" style="--vlr:4">Galery</a></li>
-            <li class="nav-item"><a href="#certificate" class="nav-link" style="--vlr:3">Certificate</a></li>
-            <li class="nav-item"><a href="#contact" class="nav-link" style="--vlr:5">Contact Me</a></li>
-            
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Search..." />
-                <button id="searchButton">Search</button>
-            </div>
+            <a href="#about" style="--vlr:2">About Me</a>
+            <a href="#skills" style="--vlr:4">Skills</a>
+            <a href="#project" style="--vlr:4">project</a>
+            <a href="#certificate" style="--vlr:3">Certificate</a>
+            <a href="#contact" style="--vlr:5">Contact Me</a>
         </nav>
     </header>
     <!-- *************************Home Section************************* -->
@@ -43,10 +36,16 @@
                 <button class="btn">Hire me</button>
                 <button class="btn">Let's Talk</button>
             </div>
-            <div class="social-media">
-        <i class='bx bxl-whatsapp' style="--vlr:7"></i>
-        <i class='bx bxl-facebook' style="--vlr:8"></i>
-        <i class='bx bxl-instagram' style="--vlr:9"></i>
+           <div class="social-media">
+            <a href="https://wa.me/6281312118909" target="_blank" rel="noopener noreferrer">
+                <i class='bx bxl-whatsapp' style="--vlr:7"></i>
+            </a>
+            <a href="https://facebook.com/NAMA_PROFIL_ANDA" target="_blank" rel="noopener noreferrer">
+                <i class='bx bxl-facebook' style="--vlr:8"></i>
+            </a>
+            <a href="https://www.instagram.com/riswanajalah_/" target="_blank" rel="noopener noreferrer">
+                <i class='bx bxl-instagram' style="--vlr:9"></i>
+            </a>
             </div>
         </div>
         <img src="./assets/images/saya11.png" alt="">
@@ -188,48 +187,28 @@
                     </a>
                 </div>
             </div>
+            <div class="skill-content2">
+                <h3 class="skill-title2">Web Aplikasi Stock Barang</h3>
+                <div class="skill-boxkk skill-box26">
+                    <a href="https://cahayalancar.com/stockmate/" target="_blank">
+                        <img src="assets/images/image1.png" alt="HTML">
+                    </a>
+                </div>
+            </div>
+            <div class="skill-content2">
+                <h3 class="skill-title2">Bantu Wujudkan Masa Depan Bisnis Anda!</h3>
+                <div class="skill-boxkk skill-box26">
+                    <a href="https://cahayalancar.com/stockmate/" target="_blank">
+                        <img src="assets/images/image.png" alt="HTML">
+                    </a>
+                </div>
+            </div>
            
             <div class="skill-content2"></div>
               
             </div>
         </div>
     </section>
-
-
-     <!-- *************************project  galery************************* -->
-
-     <section class="Galery" id="Galery">
-       <div class="button-group">
-        <button class="button" onclick="filterGallery('all')">Semua</button>
-        <button class="button" onclick="filterGallery('ilustrasi')">Ilustrasi</button>
-        <button class="button" onclick="filterGallery('desain')">Desain Grafis</button>
-        <button class="button" onclick="filterGallery('fotografi')">Fotografi</button>
-    </div>
-
-    <div class="gallery" id="gallery">
-        <div class="gallery-item ilustrasi">
-            <img src="https://via.placeholder.com/200?text=Ilustrasi+1" alt="Ilustrasi 1">
-        </div>
-        <div class="gallery-item desain">
-            <img src="https://via.placeholder.com/200?text=Desain+Grafis+1" alt="Desain Grafis 1">
-        </div>
-        <div class="gallery-item fotografi">
-            <img src="https://via.placeholder.com/200?text=Fotografi+1" alt="Fotografi 1">
-        </div>
-        <div class="gallery-item ilustrasi">
-            <img src="https://via.placeholder.com/200?text=Ilustrasi+2" alt="Ilustrasi 2">
-        </div>
-        <div class="gallery-item desain">
-            <img src="https://via.placeholder.com/200?text=Desain+Grafis+2" alt="Desain Grafis 2">
-        </div>
-        <div class="gallery-item fotografi">
-            <img src="https://via.placeholder.com/200?text=Fotografi+2" alt="Fotografi 2">
-        </div>
-    </div>
-    </section>
-
-
-
 
      <!-- *************************Certificate Section************************* -->
 
@@ -278,51 +257,22 @@
         </div>
     </section>
 
+    <!-- *************************Contact Section************************* -->
     <section class="contact" id="contact">
-        <h2 class="title">Contact<span> Me</span></h2>
-        <div class="contact-container1">
-            <form action="#" id="">
-                <div class="input-box">
-                    <input type="text" required placeholder="Full Name">
-                    <input type="email" required placeholder="Email">
-                </div>
-                <div class="input-box">
-                    <input type="tel" required placeholder="Mobile Number">
-                    <input type="email" required placeholder="Subject For">
-                </div>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Message" required></textarea>
-                <input type="submit" value="Send Message" class="btn">
-            </form>
-            <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.999999999999!2d106.590335!3d-6.1387114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a01d73ef9d893%3A0xb3137d21c42d6704!2sGg.%20Cideng%2C%20Lb.%20Wangi%2C%20Kec.%20Sepatan%20Tim.%2C%20Kabupaten%20Tangerang%2C%20Banten%2015520!5e0!3m2!1sen!2sid!4v1618142679256!5m2!1sen!2sid" 
-                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-                </iframe>
+        <h2 class="title">Contact<span>Me</span></h2>
+        <form action="#" id="">
+            <div class="input-box">
+    <input type="text" required placeholder="Full Name">
+    <input type="email" required placeholder="Email">
             </div>
-        </div>
-        <div class="contactMethod">
-            <div class="method">
-                <i class="fa-solid fa-location-dot contactIcon"></i>
-                <article class="text">
-                    <h1 class="sub-heading">Location</h1>
-                    <p class="para">Tangerang selatan</p>
-                </article>
+            <div class="input-box">
+    <input type="tel" required placeholder="Mobile Number">
+    <input type="email" required placeholder="Subject For">
             </div>
-            <div class="method">
-                <i class="fa-solid fa-envelope contactIcon"></i>
-                <article class="text">
-                    <h1 class="sub-heading">Email</h1>
-                    <p class="para">Email: riswanajalah01@gmail.com</p>
-                </article>
-            </div>
-            <div class="method">
-                <i class="fa-solid fa-phone contactIcon"></i>
-                <article class="text">
-                    <h1 class="sub-heading">Phone</h1>
-                    <p class="para">08538524452</p>
-                </article>
-            </div>
-        </div>
+    <textarea name="" id="" cols="30" rows="10" placeholder="Message" required></textarea>
+    <input type="submit" value="Send Message" class="btn">
+        </form>
+
     </section>
 
     <footer>
