@@ -1,287 +1,194 @@
-
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riswanto halim</title>
+    <title>Riswanto halim | Full-Stack Developer</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-
 <body>
-    <!-- *************************Navbar************************* -->
-    <header class="header">
-        <div class="logo">Port<span>folio</span></div>
-        <i class='bx bx-menu' id="menu" style='color:#ffffff'></i>
-        <nav class="navbar">
-            <a href="#home" style="--vlr:1" class="active">Home</a>
-            <a href="#about" style="--vlr:2">About Me</a>
-            <a href="#skills" style="--vlr:4">Skills</a>
-            <a href="#project" style="--vlr:4">project</a>
-            <a href="#certificate" style="--vlr:3">Certificate</a>
-            <a href="#contact" style="--vlr:5">Contact Me</a>
+
+    <header id="header">
+        <nav class="navbar container">
+            <a href="#hero" class="logo">Riswanto halim</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="#about-skills" class="nav-link">Tentang</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Layanan</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Proyek</a></li>
+                <li class="nav-item"><a href="#testimonials" class="nav-link">Testimoni</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Kontak</a></li>
+            </ul>
         </nav>
     </header>
-    <!-- *************************Home Section************************* -->
-    <section class="home"  id="home">
-        <div class="text-content">
-            <h1>I'm Riswanto Halim</h1>
-            <div class="text-animation">
-                <h2>Frontend Developer</h2>
+
+    <main>
+        <section id="hero" class="hero container section">
+            <div id="particles-js"></div>
+            <div class="hero-text">
+                <p class="subtitle">Halo, saya</p>
+                <h1 class="title">Riswanto halim</h1>
+                <h2 class="tagline"></h2>
+                <p class="description">
+                    Seorang pengembang web yang bersemangat dalam membangun aplikasi yang fungsional, modern, dan mudah digunakan dari awal hingga akhir.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Lihat Proyek</a>
+                    <a href="path/to/your/cv.pdf" download class="btn btn-secondary">Download CV</a>
+                </div>
             </div>
-    <p>Saya adalah seorang Front-End Developer yang berdedikasi dengan passion besar dalam menciptakan pengalaman web yang interaktif, responsif, dan user-friendly. Dengan keahlian dalam HTML, CSS, JavaScript, serta framework seperti React dan Vue.js, saya berfokus pada membangun antarmuka yang intuitif dan mudah digunakan.</p>
-            <div class="btn-section">
-                <button class="btn">Hire me</button>
-                <button class="btn">Let's Talk</button>
+            <div class="hero-image-container">
+                <div class="glowing-avatar-border"></div>
+                <img src="./assets/images/saya.png" alt="Avatar Anda" class="avatar">
             </div>
-           <div class="social-media">
-            <a href="https://wa.me/6281312118909" target="_blank" rel="noopener noreferrer">
-                <i class='bx bxl-whatsapp' style="--vlr:7"></i>
-            </a>
-            <a href="https://facebook.com/NAMA_PROFIL_ANDA" target="_blank" rel="noopener noreferrer">
-                <i class='bx bxl-facebook' style="--vlr:8"></i>
-            </a>
-            <a href="https://www.instagram.com/riswanajalah_/" target="_blank" rel="noopener noreferrer">
-                <i class='bx bxl-instagram' style="--vlr:9"></i>
-            </a>
+        </section>
+
+        <section id="about-skills" class="about-skills section">
+            <div class="container">
+                <h2 class="section-title"><span class="reveal-text">Tentang & Keahlian</span></h2>
+                <div class="bento-grid">
+                    <div class="bento-item item-about"><h3>Tentang Saya</h3><p>Full-Stack Developer dengan hasrat untuk menciptakan solusi web yang efisien. Saya fokus pada clean code, arsitektur solid, dan pengalaman pengguna yang intuitif.</p></div>
+                    <div class="bento-item item-skill-main"><i class="fa-brands fa-laravel"></i><h4>Laravel</h4><p>Backend kokoh & cepat.</p></div>
+                    <div class="bento-item item-skill-main"><i class="fa-brands fa-react"></i><h4>React</h4><p>UI interaktif & modern.</p></div>
+                    <div class="bento-item item-skills-other"><h3>Teknologi Lainnya</h3><div class="other-skills-list"><span><i class="fa-brands fa-node-js"></i> Node.js</span><span><i class="fa-brands fa-vuejs"></i> Vue.js</span><span><i class="fa-solid fa-database"></i> MySQL</span><span><i class="fa-brands fa-git-alt"></i> Git</span><span><i class="fa-brands fa-docker"></i> Docker</span></div></div>
+                    <div class="bento-item item-connect"><h3>Mari Terhubung!</h3><p>Tertarik untuk kolaborasi?</p>
+                        <br><a href="#contact" class="btn btn-primary">Hubungi Saya</a></div>
+                </div>
             </div>
+        </section>
+
+        <section id="services" class="services section">
+            <h2 class="section-title"><span class="reveal-text">Layanan yang Saya Tawarkan</span></h2>
+            <div class="container services-container">
+                <div class="service-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Pengembangan Web Full-Stack</h3>
+                    <p>Membangun aplikasi web lengkap dari sisi server (backend) hingga sisi klien (frontend) dengan teknologi terkini.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-palette"></i>
+                    <h3>Desain UI/UX</h3>
+                    <p>Merancang antarmuka yang tidak hanya indah secara visual, tetapi juga intuitif dan ramah pengguna.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Desain Responsif</h3>
+                    <p>Memastikan website Anda tampil sempurna di berbagai perangkat, mulai dari desktop hingga smartphone.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects" class="projects section">
+            <h2 class="section-title"><span class="reveal-text">Proyek Unggulan</span></h2>
+            <div class="container">
+                <div class="project-filter">
+                    <button class="filter-btn active" data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="laravel">Laravel</button>
+                    <button class="filter-btn" data-filter="react">React</button>
+                    <button class="filter-btn" data-filter="nodejs">Node.js</button>
+                </div>
+                <div class="swiper project-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide spotlight-card" data-category="laravel react"><div class="project-card"><img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzOTAwNXwwfDF8c2VhcmNofDQwfHx3ZWJzaXRlJTIwcHJvamVjdHxlbnwwfHx8fDE3MjA4NTAxODZ8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="P1" class="project-image"><div class="project-info"><h3>Manajemen Inventaris</h3><p>Aplikasi web untuk melacak stok barang secara real-time, dibangun dengan arsitektur modern.</p><div class="project-tech"><span>Laravel</span><span>React</span></div><div class="project-links"><a href="#" class="btn-link">Live Demo <i class="fas fa-external-link-alt"></i></a><a href="#" class="btn-link">GitHub <i class="fa-brands fa-github"></i></a></div></div></div></div>
+                        <div class="swiper-slide spotlight-card" data-category="php"><div class="project-card"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzOTAwNXwwfDF8c2VhcmNofDQ2fHx3ZWJzaXRlJTIwcHJvamVjdHxlbnwwfHx8fDE3MjA4NTAxODZ8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="P2" class="project-image"><div class="project-info"><h3>Website E-Commerce</h3><p>Platform toko online lengkap dengan fitur keranjang belanja, pembayaran, dan manajemen produk.</p><div class="project-tech"><span>PHP</span><span>JavaScript</span></div><div class="project-links"><a href="#" class="btn-link">Live Demo <i class="fas fa-external-link-alt"></i></a><a href="#" class="btn-link">GitHub <i class="fa-brands fa-github"></i></a></div></div></div></div>
+                        <div class="swiper-slide spotlight-card" data-category="nodejs"><div class="project-card"><img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzOTAwNXwwfDF8c2VhcmNofDU0fHx3ZWJzaXRlJTIwcHJvamVjdHxlbnwwfHx8fDE3MjA4NTAyMjR8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="P3" class="project-image"><div class="project-info"><h3>Aplikasi Blog Personal</h3><p>Blog dinamis yang dibangun menggunakan Node.js dan Express, dengan sistem manajemen konten sederhana.</p><div class="project-tech"><span>Node.js</span><span>Express</span></div><div class="project-links"><a href="#" class="btn-link">Live Demo <i class="fas fa-external-link-alt"></i></a><a href="#" class="btn-link">GitHub <i class="fa-brands fa-github"></i></a></div></div></div></div>
+                        <div class="swiper-slide spotlight-card" data-category="react"><div class="project-card"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzOTAwNXwwfDF8c2VhcmNofDQ2fHx3ZWJzaXRlJTIwcHJvamVjdHxlbnwwfHx8fDE3MjA4NTAxODZ8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="P4" class="project-image"><div class="project-info"><h3>Dasbor Analitik</h3><p>Platform visualisasi data interaktif yang membantu pengguna memahami tren kompleks dengan mudah.</p><div class="project-tech"><span>React</span><span>D3.js</span></div><div class="project-links"><a href="#" class="btn-link">Live Demo <i class="fas fa-external-link-alt"></i></a><a href="#" class="btn-link">GitHub <i class="fa-brands fa-github"></i></a></div></div></div></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials section">
+            <h2 class="section-title"><span class="reveal-text">Apa Kata Mereka</span></h2>
+            <div class="container">
+                <div class="swiper testimonial-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <img src="https://i.pravatar.cc/80?u=a" alt="Klien 1">
+                                <p>"Kerja sama yang luar biasa! Solusi yang diberikan sangat inovatif dan sesuai dengan kebutuhan bisnis kami. Sangat direkomendasikan."</p>
+                                <h4>- Nama Klien 1, CEO Perusahaan X</h4>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <img src="https://i.pravatar.cc/80?u=b" alt="Klien 2">
+                                <p>"Proses pengembangan berjalan mulus dan komunikasi sangat baik. Hasil akhirnya melebihi ekspektasi saya."</p>
+                                <h4>- Nama Klien 2, Manajer Proyek Y</h4>
+                            </div>
+                        </div>
+                         <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <img src="https://i.pravatar.cc/80?u=c" alt="Klien 3">
+                                <p>"Kemampuan teknis dan perhatian terhadap detailnya sangat mengesankan. Pasti akan bekerja sama lagi di masa depan."</p>
+                                <h4>- Nama Klien 3, Pendiri Startup Z</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact section">
+            <h2 class="section-title"><span class="reveal-text">Hubungi Saya</span></h2>
+            <div class="container contact-container">
+                <div class="contact-info">
+                    <h3>Mari Terhubung</h3>
+                    <p>Jika Anda tertarik untuk berkolaborasi atau memiliki pertanyaan, jangan ragu untuk menghubungi saya.</p>
+                   <a href="mailto:riswantohalim319@gmail.com" class="contact-link">riswantohalim319@gmail.com</a>
+                    <div class="social-links">
+                        <a href="#" aria-label="GitHub" class="magnetic-link"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="magnetic-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/riswanajalah_/?next=%2F" aria-label="Instagram" class="magnetic-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <form id="contact-form" action="https://formspree.io/f/xqalkkzj" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Nama Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Pesan Anda" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                    <p id="form-status" style="margin-top: 1rem; color: var(--secondary-color);"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 | Dibuat oleh Riswanto halim</p>
         </div>
-        <img src="./assets/images/saya11.png" alt="">
-    </section>
-    <!-- *************************About Section************************* -->
-    <section class="about" id="about">
-        <h2 class="title">About <span>Me</span></h2>
-        <img src="./assets/images/saya11.png" alt="" class="aboutImg">
-        <div class="text-content2">
-            <h2>Frontend Developer</h2>
-    <p>Halo! Saya Riswanto Halim, seorang Front-End Developer yang bersemangat dengan komitmen kuat untuk menciptakan antarmuka pengguna yang indah dan fungsional. Dengan pengalaman selama 2 tahun di bidang ini, saya mengkhususkan diri dalam menerjemahkan konsep desain menjadi aplikasi web yang responsif dan interaktif.</p>
-            <button class="btn">Read More</button>
-        </div>
-    </section>
-   
-    
-    <!-- *************************Skills Section************************* -->
-    <section class="skills" id="skills">
-        <h2 class="title">My <span>Skills</span></h2>
-        <div class="wrapper">
-            <div class="skill-content">
-                <h3 class="skill-title">Language</h3>
-                <div class="skill-box skill-box1">
-                    <div class="single-skill">
-                        <span class="topic">HTML</span>
-                        <span class="topic">90%</span>
-                    </div>
-                    <div class="bar-side">
-                        <div class="bar bar-1"></div>
-                    </div>
-                    <div class="single-skill">
-                        <span class="topic">CSS</span>
-                        <span class="topic">60%</span>
-                    </div>
-                    <div class="bar-side">
-                        <div class="bar bar-2"></div>
-                    </div>
-                    <div class="single-skill">
-                        <span class="topic">JavaScript</span>
-                        <span class="topic">30%</span>
-                    </div>
-                    <div class="bar-side">
-                        <div class="bar bar-3"></div>
-                    </div>
-                    <div class="single-skill">
-                        <span class="topic">php</span>
-                        <span class="topic">10%</span>
-                    </div>
-                    <div class="bar-side">
-                        <div class="bar bar-4"></div>
-                    </div>
-                  
-                </div>
-            </div>
-
-            <div class="skill-content">
-                <h3 class="skill-title">Language</h3>
-                <div class="skill-box skill-box2">
-                    <div class="single-skill">
-                        <span class="topic">HTML</span>
-                        <span class="topic">90%</span>
-                    </div>
-                    <div class="bar-side">
-                        <div class="bar bar-1"></div>
-                    </div>
-                    <div class="single-skill">
-                        <span class="topic">CSS</span>
-                        <span class="topic">60%</span>
-                    </div>
-                    <div class="bar-side">
-                        <div class="bar bar-2"></div>
-                    </div>
-                <div class="single-skill">
-                    <span class="topic">JavaScript</span>
-                    <span class="topic">30%</span>
-                </div>
-                    <div class="bar-side">
-                        <div class="bar bar-3"></div>
-                    </div>
-                    <div class="single-skill">
-                        <span class="topic">php</span>
-                        <span class="topic">10%</span>
-                    </div>
-                    <div class="bar-side">
-                        <div class="bar bar-4"></div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-
-
-
-     <!-- *************************project  Section************************* -->
-
-     <section class="project" id="project">
-        <h2 class="title">My <span>project</span></h2>
-        <div class="wrapper2">
-            <div class="skill-content2">
-                <h3 class="skill-title2">Form login</h3>
-                <div class="skill-boxkk skill-box22">
-                    <a href="project/form login/index.html" target="_blank">
-                        <img src="./assets/images/form.png" alt="form">
-                    </a>
-                </div>
-            </div>
-            <div class="skill-content2">
-                <h3 class="skill-title2">kalkulator</h3>
-                <div class="skill-boxkk skill-box23">
-                    <a href="project/kalkulator" target="_blank">
-                        <img src="./assets/images/kalkulator.png" alt="kalkulator">
-                    </a>
-                </div>
-            </div>
-            
-            <div class="skill-content2">
-                <h3 class="skill-title2">diagram</h3>
-                <div class="skill-boxkk skill-box24">
-                    <a href="project/dasbord" target="_blank">
-                        <img src="assets/images/dasbord.png" alt="HTML">
-                    </a>
-                </div>
-            </div>
-            <div class="skill-content2">
-                <h3 class="skill-title2">Snake game</h3>
-                <div class="skill-boxkk skill-box25">
-                    <a href="project/game snake/snake.html" target="_blank">
-                        <img src="assets/images/snake1.png" alt="HTML">
-                    </a>
-                </div>
-            </div>
-            <div class="skill-content2">
-                <h3 class="skill-title2">Laporan penjualan</h3>
-                <div class="skill-boxkk skill-box26">
-                    <a href="project/laporan penjualan/index.html" target="_blank">
-                        <img src="assets/images/laporan.png" alt="HTML">
-                    </a>
-                </div>
-            </div>
-            <div class="skill-content2">
-                <h3 class="skill-title2">Web Aplikasi Stock Barang</h3>
-                <div class="skill-boxkk skill-box26">
-                    <a href="https://cahayalancar.com/stockmate/" target="_blank">
-                        <img src="assets/images/image1.png" alt="HTML">
-                    </a>
-                </div>
-            </div>
-            <div class="skill-content2">
-                <h3 class="skill-title2">Bantu Wujudkan Masa Depan Bisnis Anda!</h3>
-                <div class="skill-boxkk skill-box26">
-                    <a href="https://riswanajalah-solutiion.vercel.app/" target="_blank">
-                        <img src="assets/images/image.png" alt="HTML">
-                    </a>
-                </div>
-            </div>
-           
-            <div class="skill-content2"></div>
-              
-            </div>
-        </div>
-    </section>
-
-     <!-- *************************Certificate Section************************* -->
-
-     <section class="certificate" id="certificate">
-        <h2 class="title">My <span>Certificate</span></h2>
-        <div class="wrapper1">
-            <div class="skill-content1">
-                <h3 class="skill-title1">Html</h3>
-                <div class="skill-boxk skill-box4">
-                    <a href="https://www.sololearn.com/certificates/CC-QYPB48V2" target="_blank">
-                        <img src="./assets/images/HTML.jpg" alt="HTML">
-                    </a>
-                </div>
-            </div>
-            
-            <div class="skill-content1">
-                <h3 class="skill-title1">css</h3>
-                <div class="skill-boxk skill-box5">
-                    <a href="https://www.sololearn.com/certificates/CC-ELYLU3NG" target="_blank">
-                        <img src="./assets/images/CSS.jpg" alt="CSS">
-                    </a>
-                </div>
-            </div>
-            <div class="skill-content1">
-                <h3 class="skill-title1">JavaScript</h3>
-                <div class="skill-boxk skill-box6">
-                    <a href="https://www.sololearn.com/certificates/CC-JQN5LYOO" target="_blank">
-                        <img src="./assets/images/JS.jpg" alt="js">
-                    </a>
-                </div>
-            </div>
-            <div class="skill-content1">
-                <h3 class="skill-title1">JavaScript Intermediate</h3>
-                <div class="skill-boxk skill-box7">
-                    <a href="https://www.sololearn.com/en/certificates/CC-YF1BM6QR" target="_blank">
-                        <img src="assets/images/JS Intermediate.png" alt="js">
-                    </a>
-                    
-                </div>
-            </div> 
-       
-            <div class="skill-content1"></div>
-            <div class="skill-content1"></div>
-              
-            </div>
-        </div>
-    </section>
-
-    <!-- *************************Contact Section************************* -->
-    <section class="contact" id="contact">
-        <h2 class="title">Contact<span>Me</span></h2>
-        <form action="#" id="">
-            <div class="input-box">
-    <input type="text" required placeholder="Full Name">
-    <input type="email" required placeholder="Email">
-            </div>
-            <div class="input-box">
-    <input type="tel" required placeholder="Mobile Number">
-    <input type="email" required placeholder="Subject For">
-            </div>
-    <textarea name="" id="" cols="30" rows="10" placeholder="Message" required></textarea>
-    <input type="submit" value="Send Message" class="btn">
-        </form>
-
-    </section>
-
-    <footer>
-
-        <div class="logo">Riswan<span>to halim</span></div>
-        <a href="#"> <i class='bx bx-up-arrow-alt'></i></a>
-
     </footer>
-    <script src="script.js"></script>
-</body>
+    
+    <a href="#" class="back-to-top" id="back-to-top-btn"><i class="fas fa-arrow-up"></i></a>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
 </html>
